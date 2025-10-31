@@ -1,0 +1,248 @@
+/* ==============================================
+   NYU CONCRETE CANOE - GLOBAL STYLESHEET
+   Author: Aunirbhan Das
+   Theme: NYU Purple (#57068C)
+   ============================================== */
+
+/* -------- General Reset -------- */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #e1e0e1;
+  color: #2a2a2a;
+}
+
+/* -------- Navigation Bar -------- */
+.navbar {
+  background: linear-gradient(
+    to right,
+    rgba(87, 6, 140, 0.95) 0%,   /* Deep NYU purple */
+    rgba(87, 6, 140, 0.7) 10%,   /* Mid transparency */
+    rgba(87, 6, 140, 0) 100%     /* Fully transparent end */
+  ) !important;
+  backdrop-filter: blur(6px); /* Subtle glass effect */
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding-top: 1rem;      /* Increases height */
+  padding-bottom: 1rem;
+  font-size: 1.05rem;
+  transition: background 0.4s ease, padding 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  background: linear-gradient(
+    to right,
+    rgba(87, 6, 140, 1),
+    rgba(124, 76, 191, 1)
+  ) !important;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Brand text */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  color: #ffffff !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #d1b3ff !important;
+}
+
+/* Nav links */
+.nav-link {
+  color: #ffffff !important;
+  margin: 0 12px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #d1b3ff !important; /* Light purple hover */
+  transform: scale(1.05);
+}
+
+/* Active link */
+.nav-link.active {
+  color: #b89ddf !important;
+  font-weight: 600;
+  border-bottom: 2px solid #b89ddf;
+}
+
+/* Navbar toggler (hamburger icon) */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar * {
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+/* -------- Home Page -------- */
+#hero {
+  position: relative;
+  background: url('../img/canoe.jpg') center center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+#hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* -------- Buttons -------- */
+.btn-primary {
+  background-color: #57068C;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #7c4cbf;
+  transform: scale(1.03);
+}
+
+/* -------- Sponsor Cards -------- */
+.card {
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  max-height: 150px;
+  object-fit: contain;
+}
+
+/* -------- Forms -------- */
+form .form-control {
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  font-size: 1rem;
+}
+
+form .form-control:focus {
+  border-color: #57068C;
+  box-shadow: 0 0 0 0.25rem rgba(87, 6, 140, 0.25);
+}
+
+form label {
+  color: #57068C;
+}
+
+/* -------- Section Headings -------- */
+h1, h2, h3, h4, h5 {
+  color: #57068C;
+}
+
+/* -------- Social Icons -------- */
+.social-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-menu a {
+  color: #ffffff;
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
+}
+
+.social-menu a:hover {
+  color: #b89ddf;
+}
+
+/* Dark icons for light backgrounds */
+a.text-dark:hover {
+  color: #57068C !important;
+}
+
+/* -------- Footer -------- */
+footer {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer small {
+  display: block;
+  color: #cccccc;
+}
+
+/* -------- Utility Classes -------- */
+.section-padding {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.shadow-light {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* -------- Responsive Adjustments -------- */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .card img {
+    max-height: 120px;
+  }
+}
+
+
+
+
+
+
+
